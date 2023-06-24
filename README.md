@@ -17,7 +17,8 @@ To track the latest paper for embedding (including text/text-code/text-image emb
 |  ----  | ----  | ---- |
 | MultipleNegativesRanking | 对于检索到的文章，匹配的文章被认为是相关的，其他的文章被任务为是不相关的，有一个问题就是，其他的文章和query其实有一些相关性。  |  |
 | MarginMSE|使用一个cross-encoder对query和passage做一个soft-label，他计算从负样本到正样本之间的距离 和 原始cross-encoder中正样本、负样本的值接近 ||
-
+|MultipleNegativesRankingLoss| 这个loss是当我们只有query和response，没有负样本的时候使用。对于sentence pairs (a_1, p_1), (a_2, p_2)…, (a_n, p_n)， (a_i, p_i) 是正样本对 而 (a_i, p_j) for i!=j 是负样本对.||
+|CosineSimilarityLoss| 句子A和句子B直接比较他们的余弦相似度，但这里要求句子A和B之间有gold 的相似度||
 ## Text-code embedding
 
 |  paper   | 主要内容  | 论文来源 |

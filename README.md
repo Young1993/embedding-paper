@@ -11,6 +11,10 @@ To track the latest paper for embedding (including text/text-code/text-image emb
 | One Embedder, Any Task: Instruction-Finetuned Text Embeddings  | 作者不是研究某个特定的任务或领域，而是希望通过手写instruction，在330个任务上进行训练，通过instruction和多任务学习来统一embedding，使得模型在新的domain或任务时，具备很好的表示能力。 |ACL2023 |
 | Text Embeddings by Weakly-Supervised Contrastive Pre-training|  这篇论文作者提出一种在无监督数据集上训练就能达到很好效果的模型E5，主要贡献就是构建了CCPairs数据集，挑选出了优质数据，batch size也比较大，在BEIR上超过了BM25，在 MTEB实现了SOTA |Arxiv2022 |
 
+### Benchmark
+|  paper   | 主要内容  | 论文来源 |
+|  ----  | ----  | ---- |
+|  BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models  | 主要是构建一个包含多样数据的信息检索的benchmark，包含了词汇、稀疏、密集、后期交互和重新排序等场景，总共包含18个数据集。 | Nips2021 |
 ### Loss 创新
 
 |  paper   | 主要内容  | 论文来源 |

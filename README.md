@@ -7,10 +7,10 @@ To track the latest paper for embedding (including text/text-code/text-image emb
 |  paper   | 主要内容  | 论文来源 |
 |  ----  | ----  | ---- |
 | TSDAE: Using Transformer-based Sequential Denoising Auto-Encoder for Unsupervised Sentence Embedding Learning  | 这篇论文作者是希望构建一个encoder-decoder结构来做无监督句子表示，他通过往输入句子中增加噪音，给decoder一个固定大小的sentence表示，然后来恢复原始输入，增强encoder的表征能力。一个去燥的做法。|EMNLP2021 findings |
-| GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval| 这篇论文要解决的问题是通过无监督学习适应domain，他使用T5根据文章内容生成对应的query，对于生成的query，作者检索最相似的段落最为负样本|NAACL2022|
-| One Embedder, Any Task: Instruction-Finetuned Text Embeddings  | 作者不是研究某个特定的任务或领域，而是希望通过手写instruction，在330个任务上进行训练，通过instruction和多任务学习来统一embedding，使得模型在新的domain或任务时，具备很好的表示能力。 |ACL2023 |
-| Text Embeddings by Weakly-Supervised Contrastive Pre-training|  这篇论文作者提出一种在无监督数据集上训练就能达到很好效果的模型E5，主要贡献就是构建了CCPairs数据集，挑选出了优质数据，batch size也比较大，在BEIR上超过了BM25，在 MTEB实现了SOTA |Arxiv2022 |
-
+| GPL: Generative Pseudo Labeling for Unsupervised Domain Adaptation of Dense Retrieval| 这篇论文要解决的问题是通过无监督学习适应domain，他使用T5根据文章内容生成对应的query，对于生成的query，作者检索最相似的段落最为负样本| NAACL2022 |
+| One Embedder, Any Task: Instruction-Finetuned Text Embeddings  | 作者不是研究某个特定的任务或领域，而是希望通过手写instruction，在330个任务上进行训练，通过instruction和多任务学习来统一embedding，使得模型在新的domain或任务时，具备很好的表示能力。 | ACL2023 |
+| Text Embeddings by Weakly-Supervised Contrastive Pre-training|  这篇论文作者提出一种在无监督数据集上训练就能达到很好效果的模型E5，主要贡献就是构建了CCPairs数据集，挑选出了优质数据，batch size也比较大，在BEIR上超过了BM25，在 MTEB实现了SOTA | Arxiv2022 |
+| PROMPTAGATOR : FEW-SHOT DENSE RETRIEVAL FROM 8 EXAMPLES| 信息检索的做法主要是利用监督数据，但是监督数据很稀缺，作者基于few-shot的范例来引导大模型来作为task-specific query generator来生成查询问题，作者设计了一个consistency的挑选，也就是通过生成的query检索出来的top-K的文章中一定要有document来挑选query-document对，然后利用高质量的内容训练retriever。作者用T5-base作为retriever效果会好于相同参数的模型。 | ICLR2023 |
 ### Benchmark
 |  paper   | 主要内容  | 论文来源 |
 |  ----  | ----  | ---- |

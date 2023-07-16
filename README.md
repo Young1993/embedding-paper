@@ -33,3 +33,8 @@ To track the latest paper for embedding (including text/text-code/text-image emb
 |  paper   | 主要内容  | 论文来源 |
 |  ----  | ----  | ---- |
 |  Chinese CLIP: Contrastive Vision-Language Pretraining in Chinese | 本文主要的做法就是复现CLIP在中文文本和图像之间对齐的，首先用CLIP的image encode来初始化image encoder，用Chinese RoBERTa来初始化文本encoder，第一阶段冻住image encoder来tune 文本的encoder；第二阶段，一起tune直到收敛。 | Arxiv2022 |
+
+# Retrieval-based Language Models and Applications
+|  paper   | 主要内容  | 论文来源 |
+|  ----  | ----  | ---- |
+|  REALM: Retrieval-Augmented Language Model Pre-Training  | 语言模型因为在预训练阶段捕获了大量的世界知识，因此推理效果很强大；但这要求很大的模型参数来存储这些知识，这篇论文作者的思路是基于retriever+小模型的方式来提高QA任务的能力，具体做法就是在预测之前，模型从维基百科检索相关文档，然后把相关文档和query一起来帮助推理，实现了比较好的效果。| Arxiv2020 |

@@ -11,11 +11,12 @@ To track the latest paper for embedding (including text/text-code/text-image emb
 | One Embedder, Any Task: Instruction-Finetuned Text Embeddings  | 作者不是研究某个特定的任务或领域，而是希望通过手写instruction，在330个任务上进行训练，通过instruction和多任务学习来统一embedding，使得模型在新的domain或任务时，具备很好的表示能力。 | ACL2023 |
 | Text Embeddings by Weakly-Supervised Contrastive Pre-training|  这篇论文作者提出一种在无监督数据集上训练就能达到很好效果的模型E5，主要贡献就是构建了CCPairs数据集，挑选出了优质数据，batch size也比较大，在BEIR上超过了BM25，在 MTEB实现了SOTA | Arxiv2022 |
 | PROMPTAGATOR : FEW-SHOT DENSE RETRIEVAL FROM 8 EXAMPLES| 信息检索的做法主要是利用监督数据，但是监督数据很稀缺，作者基于few-shot的范例来引导大模型来作为task-specific query generator来生成查询问题，作者设计了一个consistency的挑选，也就是通过生成的query检索出来的top-K的文章中一定要有document来挑选query-document对，然后利用高质量的内容训练retriever。作者用T5-base作为retriever效果会好于相同参数的模型。 | ICLR2023 |
-
+|RetroMAE: Pre-Training Retrieval-oriented Language Models Via Masked Auto-Encoder|这篇论文的做法和bottleneck的做法很像，都是有一个encoder，加一个shallow的decoder，然后通过加mask等在充分训练encoder的embedding，从而提升效果|EMNLP2022|
 ### Document embedding
 |  paper   | 主要内容  | 论文来源 |
 |  ----  | ----  | ---- |
 |CODER: An efficient framework for improving retrieval through COntextual Document Embedding Reranking| 对比学习在训练dense retrieval模型时用的很多，一般都是采用in-batch negative负样本的做法，作者做了3点改进，首先通过一个对文档的打分方法（基于预训练模型，计算一个query对一些document的联合相关性得分），从而可以检索到负样本而不是随机的负样本，这样采样质量更高；作者还采用了一个完全的list-wise loss来训练，取得了比较好的效果。（有点没get到这篇优势，可能最大的就是针对query去筛选样本，然后可以和现有的模型结合，从而得到效果提升）  | EMNLP2022 |
+
 ### Benchmark
 |  paper   | 主要内容  | 论文来源 |
 |  ----  | ----  | ---- |
